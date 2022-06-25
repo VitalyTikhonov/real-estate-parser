@@ -19,15 +19,12 @@ fs.readFile(filePath, 'utf8', (err, data) => {
   const ws = wb.addWorksheet('Sheet 1');
   lines.forEach((line, index) => {
     let [flatType, square, floor] = line;
-    ws.cell(index + 1, 1)
-    .string(flatType);
-    ws.cell(index + 1, 2)
-    .string(square);
-    ws.cell(index + 1, 3)
-    .string(floor);
+    ws.cell(index + 1, 1).string(flatType);
+    ws.cell(index + 1, 2).string(square);
+    ws.cell(index + 1, 3).string(floor);
     wb.write(path.join(__dirname, 'output.xlsx'));
   })
-  console.log(lines);
-  console.log('analysis', analysis);
-  console.log('lines.length', lines.length);
+  // console.log(lines);
+  console.log('Все строки содержат по 3 элемента:', analysis ? 'да' : 'НЕТ! Проверь входные данные или доработай парсер.');
+  console.log('Строк:', lines.length);
 });
