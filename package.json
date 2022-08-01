@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "A parser for real estate data",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "author": "Vitaliy Tikhonov",
   "license": "ISC",
   "dependencies": {
-    "excel4node": "^1.7.2"
+    "excel4node": "^1.7.2",
+    "exceljs": "^4.3.0"
   }
 }
